@@ -35,11 +35,16 @@ h1{margin:0 0 12px 0;font-size:28px}
 .task-left{display:flex;flex-direction:column}
 .task-title{font-size:15px;margin:0}
 .task-meta{font-size:13px;color:var(--muted);margin-top:4px}
-.task-actions{display:flex;gap:8px;align-items:center}
+
+/* Actions hidden by default; reveal on hover or keyboard focus */
+.task-actions{display:flex;gap:8px;align-items:center;opacity:0;pointer-events:none;transition:opacity .15s ease-in-out}
+.task-item:hover .task-actions, .task-item:focus-within .task-actions{opacity:1;pointer-events:auto}
+
 .btn{border:none;padding:6px 8px;border-radius:6px;cursor:pointer;font-size:13px}
 .btn--danger{background:#ef4444;color:#fff}
 .btn--ghost{background:transparent;color:var(--muted);border:1px solid transparent}
 .btn:active{transform:translateY(1px)}
+.btn:focus{outline:2px solid rgba(37,99,235,.25);outline-offset:2px}
 .empty{color:var(--muted);margin-top:8px}
 
 @media (max-width:480px){
