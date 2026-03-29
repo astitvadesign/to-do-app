@@ -1,0 +1,47 @@
+:root{
+  --bg:#f3f4f6;
+  --card:#ffffff;
+  --accent:#2563eb;
+  --muted:#6b7280;
+}
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial;
+  background:var(--bg);
+  color:#111827;
+  min-height:100vh;
+  display:flex;
+  align-items:flex-start;
+  justify-content:center;
+  padding:48px 16px;
+}
+.container{
+  width:100%;
+  max-width:640px;
+  background:var(--card);
+  border-radius:12px;
+  box-shadow:0 6px 24px rgba(15,23,42,0.08);
+  padding:28px;
+}
+h1{margin:0 0 12px 0;font-size:28px}
+.task-form{display:flex;gap:8px;margin-bottom:18px}
+#task-input{flex:1;padding:10px 12px;border:1px solid #e5e7eb;border-radius:8px;font-size:15px}
+.task-form button{background:var(--accent);color:#fff;border:none;padding:10px 14px;border-radius:8px;cursor:pointer}
+.task-form button:active{transform:translateY(1px)}
+.tasks h2{margin:6px 0 8px 0;font-size:16px;color:var(--muted)}
+.task-list{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:8px}
+.task-item{display:flex;align-items:center;justify-content:space-between;padding:10px;border-radius:8px;border:1px solid #f1f5f9}
+.task-left{display:flex;flex-direction:column}
+.task-title{font-size:15px;margin:0}
+.task-meta{font-size:13px;color:var(--muted);margin-top:4px}
+.task-actions{display:flex;gap:8px;align-items:center}
+.btn{border:none;padding:6px 8px;border-radius:6px;cursor:pointer;font-size:13px}
+.btn--danger{background:#ef4444;color:#fff}
+.btn--ghost{background:transparent;color:var(--muted);border:1px solid transparent}
+.btn:active{transform:translateY(1px)}
+.empty{color:var(--muted);margin-top:8px}
+
+@media (max-width:480px){
+  .container{padding:20px}
+}
